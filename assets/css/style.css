@@ -14,11 +14,11 @@ body {
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
-    overflow-x: hidden; /* Disable horizontal scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-    height: 100vh; /* Full viewport height */
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    height: 100vh; 
 }
-    
+
 .container {
     text-align: center;
     height: 900px;
@@ -121,8 +121,7 @@ section_bonnie {
 
 section_freddy img, section_bonnie img {
     max-width: 800px; 
-    max-height: 800px; /* Sesuaikan sesuai kebutuhan */
-    height: auto;
+    max-height: 800px; 
 }
 section_chica {
     width: 100%;
@@ -152,6 +151,6 @@ section_foxy {
 }
 section_chica img, section_foxy img {
     max-width: 800px; 
-    max-height: 800px; /* Sesuaikan sesuai kebutuhan */
+    max-height: 800px; 
     height: auto;
 }
