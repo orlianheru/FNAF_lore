@@ -44,3 +44,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.getElementById('LoginForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log('Form Submitted');
+
+    const correctUsername = 'WilliamAfton';
+    const correctPassword = '12345';
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    if(username === correctUsername && password === correctPassword){
+        alert('Login Berhasil');
+        window.location.href = 'index.html';
+    }else{
+        alert('Login Gagal');
+    }
+});
+
