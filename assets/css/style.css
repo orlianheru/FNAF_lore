@@ -12,7 +12,7 @@ body {
     background-color: #000;
     background-image: url('/assets/images/background-security.jpg');
     background-position: center;
-    background-size: auto;
+    background-size: cover; 
     background-repeat: no-repeat;
     overflow-x: hidden; 
     overflow-y: auto; 
@@ -21,28 +21,19 @@ body {
 
 .container {
     text-align: center;
-    height: 900px;
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 }
 
-.image-container {
-    position: absolute;
-    top: 1200%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    margin-top: 100px;
-}
-
 .container img {
     display: block;
     margin: 0 auto;
+    max-width: 600px; 
+    max-height: 600px; 
     height: auto;
-    max-width: 600px;
-    max-height: 600px;
-    position: relative;
 }
 
 nav {
@@ -50,18 +41,17 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #000;
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    padding: 0;
+    margin: 0;
+    padding: 15px; 
 }
 
 nav a {
@@ -69,7 +59,7 @@ nav a {
     text-decoration: none;
     padding: 10px;
     margin: 0 10px;
-    font-size: 35px;
+    font-size: 35px; 
     transition: color 0.3s ease;
 }
 
@@ -80,11 +70,11 @@ nav a:hover {
 button {
     color: white;
     padding: 15px 30px;
-    font-size: 50px;
+    font-size: 50px; 
     cursor: pointer;
-    font-family: 'FiveNightsAtFreddys', sans-serif;
     border: none;
     background: none;
+    font-family: 'FiveNightsAtFreddys', sans-serif;
     transition: color 0.3s ease;
 }
 
@@ -92,40 +82,9 @@ button:hover {
     color: red;
 }
 
-section_freddy {
+.section_freddy {
     width: 100%;
-    height: 100vh;;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: start;
-    font-size: 35px;
-    margin: 150px 0;
-    padding: 20px;
-
-}
-section_bonnie {
-    width: 100%;
-    height: 100vh;;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: start;
-    font-size: 35px;
-    margin: 150px 0; 
-    padding: 20px;
-    flex-direction: row-reverse; 
-}
-
-section_freddy img, section_bonnie img {
-    max-width: 800px; 
-    max-height: 800px; 
-}
-section_chica {
-    width: 100%;
-    height: 100vh;;
+    height: 100vh;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -135,9 +94,10 @@ section_chica {
     margin: 150px 0;
     padding: 20px;
 }
-section_foxy {
+
+.section_bonnie {
     width: 100%;
-    height: 100vh;;
+    height: 100vh;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -146,11 +106,62 @@ section_foxy {
     font-size: 35px;
     margin: 150px 0;
     padding: 20px;
-    flex-direction: row-reverse; 
-
+    flex-direction: row-reverse;
 }
-section_chica img, section_foxy img {
-    max-width: 800px; 
-    max-height: 800px; 
+
+.section_chica {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: start;
+    font-size: 35px;
+    margin: 150px 0;
+    padding: 20px;
+}
+
+.section_foxy {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: start;
+    font-size: 35px;
+    margin: 150px 0;
+    padding: 20px;
+    flex-direction: row-reverse;
+}
+
+.section_freddy img, .section_bonnie img, .section_chica img, .section_foxy img {
+    max-width: 800px;
+    max-height: 800px;
     height: auto;
 }
+
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 18px;
+    }
+
+    .section_freddy, .section_bonnie, .section_chica, .section_foxy {
+        font-size: 25px; 
+        margin: 10px 0;
+    }
+
+    .container img {
+        max-width: 80%;
+        height: auto;
+    }
+
+
+    .section_freddy, .section_bonnie, .section_chica, .section_foxy {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+}
+
